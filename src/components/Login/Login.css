@@ -1,0 +1,44 @@
+.log-in-container {
+  height: 100vh;
+  display: flex;
+}
+
+.login-1 {
+  height: 100vh;
+  flex: 2;
+  background-color: white;
+  position: relative;
+}
+
+.login-1 > h1 {
+  font-size: 80px;
+  font-family: "Ubuntu", sans-serif;
+  position: absolute;
+  bottom: 150px;
+  margin-left: 20px;
+  background-color: #8bbee8ff;
+}
+
+.login-1 > h2 {
+  font-size: 80px;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 20px;
+  position: absolute;
+  bottom: 40px;
+  background-color: #8bbee8ff;
+}
+
+.login-1 > img {
+  height: 100vh;
+  opacity: 98%;
+}
+
+.login-2 {
+  padding: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background-color: #8bbee8ff;
+}
