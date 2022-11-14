@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/auth");
@@ -20,6 +21,7 @@ const connect = async () => {
 };
 
 // middlewares
+app.use(cors());
 app.use(express.json()); // to receive json data
 app.use(cookieParser());
 
