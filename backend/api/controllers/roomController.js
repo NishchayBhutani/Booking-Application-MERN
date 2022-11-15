@@ -27,9 +27,26 @@ const updateRoom = async (req, res, next) => {
       {
         $set: req.body,
       },
-      { new: true }
+      { new: true },
     );
     res.status(200).json(updatedRoom);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const updateRoomAvailability = async (req, res, next) => {
+  try {
+    console.log("hi");
+    await Room.updateOne(
+      { "roomNumbers._id": req.params.id },
+      {
+        $push: {
+          "roomNumbers.$.unavailableDates": req.body.dates,
+        },
+      },
+    );
+    res.status(200).json("Room status has been updated.");
   } catch (err) {
     next(err);
   }
@@ -76,4 +93,5 @@ module.exports = {
   deleteRoom,
   getRoomById,
   getAllRooms,
+  updateRoomAvailability,
 };
