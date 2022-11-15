@@ -5,7 +5,6 @@ const createError = require("../utils/error");
 const createRoom = async (req, res, next) => {
   const hotelId = req.params.hotelId;
   const newRoom = new Room(req.body);
-
   try {
     const savedRoom = await newRoom.save();
     try {
@@ -28,7 +27,7 @@ const updateRoom = async (req, res, next) => {
       {
         $set: req.body,
       },
-      { new: true },
+      { new: true }
     );
     res.status(200).json(updatedRoom);
   } catch (err) {

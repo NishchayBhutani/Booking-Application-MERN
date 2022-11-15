@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { SearchContextProvider } from "./context/SearchContext";
+// import { SearchContextProvider } from "./context/SearchContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <SearchContextProvider>
+    {/* <SearchContextProvider> */}
       <App />
-    </SearchContextProvider>
+    {/* </SearchContextProvider> */}
   </React.StrictMode>,
 );

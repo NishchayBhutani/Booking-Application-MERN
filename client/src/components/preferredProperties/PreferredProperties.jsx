@@ -3,29 +3,28 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 const PreferredProperties = () => {
   const { data, loading, error } = useFetch(
-    "http://localhost:5000/api/hotel?featured=true&limit=4",
+    "http://localhost:5000/api/hotel/?featured=true&limit=4"
   );
-  console.log(data);
   return (
-    <div className='preferred-properties'>
+    <div className="preferred-properties">
       {loading ? (
         "loading"
       ) : (
         <>
           {data.map((item) => (
-            <div className='pp-item' key={item._id}>
+            <div className="pp-item" key={item._id}>
               <img
                 src={item.photos[0]}
-                alt='image not available'
-                className='pp-img'
+                alt="image not available"
+                className="pp-img"
               />
-              <span className='pp-name'>{item.name}</span>
-              <span className='pp-city'>{item.city}</span>
-              <span className='pp-price'>
+              <span className="pp-name">{item.name}</span>
+              <span className="pp-city">{item.city}</span>
+              <span className="pp-price">
                 Starting from ${item.cheapestPrice}
               </span>
               {item.rating && (
-                <div className='pp-rating'>
+                <div className="pp-rating">
                   <button>{item.rating}</button>
                   <span>Excellent</span>
                 </div>

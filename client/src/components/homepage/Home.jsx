@@ -12,11 +12,11 @@ const Home = () => {
     <div>
       <Navbar />
       <Header />
-      <div className='home-container'>
+      <div className="home-container">
         <Featured />
-        <h1 className='home-title'>Browse by property type</h1>
+        <h1 className="home-title">Browse by property type</h1>
         <PropertyList />
-        <h1 className='home-title'>Homes guests love</h1>
+        <h1 className="home-title">Homes guests love</h1>
         <PreferredProperties />
         <MailList />
         <Footer />
